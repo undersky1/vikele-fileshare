@@ -71,7 +71,10 @@ export class SharePointFileService {
       );
     }
 
-    const data = await response.json();
+    const data = (await response.json()) as {
+      access_token: string;
+      expires_in?: number;
+    };
     this.cachedToken = {
       access_token: data.access_token,
       expires_on: data.expires_in
