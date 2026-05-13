@@ -33,7 +33,7 @@ const Footer = () => {
             href="https://github.com/smp46/pingvin-share-x"
             target="_blank"
           >
-            Pingvin Share X
+            Vikele FileShare
           </Anchor>
         </Text>
       )}
@@ -47,7 +47,7 @@ const Footer = () => {
               href="https://github.com/smp46/pingvin-share-x"
               target="_blank"
             >
-              Pingvin Share X
+              Vikele FileShare
             </Anchor>
           </Text>
           <div>

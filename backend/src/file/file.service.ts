@@ -1,6 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { LocalFileService } from "./local.service";
 import { S3FileService } from "./s3.service";
+import { SharePointFileService } from "./sharepoint.service";
 import { ConfigService } from "src/config/config.service";
 import { Readable } from "stream";
 import { PrismaService } from "../prisma/prisma.service";
@@ -11,6 +12,7 @@ export class FileService {
     private prisma: PrismaService,
     private localFileService: LocalFileService,
     private s3FileService: S3FileService,
+    private sharePointFileService: SharePointFileService,
     private configService: ConfigService,
   ) {}
 
@@ -18,14 +20,18 @@ export class FileService {
   // shareId is optional -> can be used to overwrite a storage provider
   private getStorageService(
     storageProvider?: string,
-  ): S3FileService | LocalFileService {
-    if (storageProvider != undefined)
-      return storageProvider == "S3"
-        ? this.s3FileService
-        : this.localFileService;
-    return this.configService.get("s3.enabled")
-      ? this.s3FileService
-      : this.localFileService;
+  ): S3FileService | LocalFileService | SharePointFileService {
+    if (storageProvider != undefined) {
+      if (storageProvider === "S3") return this.s3FileService;
+      if (storageProvider === "SHAREPOINT")
+        return this.sharePointFileService;
+      return this.localFileService;
+    }
+    if (this.configService.get("sharepoint.enabled"))
+      return this.sharePointFileService;
+    if (this.configService.get("s3.enabled"))
+      return this.s3FileService;
+    return this.localFileService;
   }
 
   async create(

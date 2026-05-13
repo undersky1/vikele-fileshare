@@ -6,7 +6,7 @@ id: upgrading
 
 ### Upgrade to a new version
 
-As Pingvin Share X is in active development, see the release notes for breaking changes before upgrading.
+As Vikele FileShare is in active development, see the release notes for breaking changes before upgrading.
 
 #### Docker
 

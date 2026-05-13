@@ -90,7 +90,11 @@ export class ShareService {
             ? share.recipients.map((email) => ({ email }))
             : [],
         },
-        storageProvider: this.configService.get("s3.enabled") ? "S3" : "LOCAL",
+        storageProvider: this.configService.get("sharepoint.enabled")
+          ? "SHAREPOINT"
+          : this.configService.get("s3.enabled")
+            ? "S3"
+            : "LOCAL",
       },
     });
 

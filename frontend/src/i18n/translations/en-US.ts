@@ -19,7 +19,7 @@ export default {
   "home.description":
     "Do you really want to give your personal files in the hand of third parties like WeTransfer?",
   "home.bullet.a.name": "Self-Hosted",
-  "home.bullet.a.description": "Host Pingvin Share on your own machine.",
+  "home.bullet.a.description": "Host Vikele FileShare on your own machine.",
   "home.bullet.b.name": "Privacy",
   "home.bullet.b.description":
     "Your files are yours and will never be accessed by third parties.",
@@ -431,7 +431,7 @@ export default {
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
   "admin.config.config-file-warning.description":
-    "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
+    "As you have a configured Vikele FileShare with a configuration file, you can't change the configuration through the UI.",
   "admin.config.title": "Configuration",
   "admin.config.category.general": "General",
   "admin.config.category.appearance": "Appearance",
@@ -463,7 +463,7 @@ export default {
     "Global CSS applied to the frontend. Use carefully, as invalid CSS may affect the UI.",
   "admin.config.general.app-url": "App URL",
   "admin.config.general.app-url.description":
-    "On which URL Pingvin Share is available",
+    "On which URL Vikele FileShare is available",
   "admin.config.general.secure-cookies": "Secure cookies",
   "admin.config.general.secure-cookies.description":
     "Whether to set the secure flag on cookies. If enabled, the site will not function when accessed over HTTP.",
@@ -488,7 +488,7 @@ export default {
     "Maximum number of items inside the cache.",
   "admin.config.cache.redis-enabled": "Redis enabled",
   "admin.config.cache.redis-enabled.description":
-    "Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.",
+    "Normally Vikele FileShare caches information in memory. If you run multiple instances of Vikele FileShare, you need to enable Redis caching to share the cache between the instances.",
   "admin.config.cache.redis-url": "Redis URL",
   "admin.config.cache.redis-url.description":
     "Url to connect to the Redis instance used for caching.",
@@ -728,6 +728,28 @@ export default {
   "admin.config.s3.use-checksum": "Use checksum",
   "admin.config.s3.use-checksum.description":
     "Turn off for backends that do not support checksum (e.g. B2).",
+  "admin.config.category.sharepoint": "SharePoint",
+  "admin.config.sharepoint.enabled": "Enabled",
+  "admin.config.sharepoint.enabled.description":
+    "Whether SharePoint should be used to store files via Microsoft Graph API.",
+  "admin.config.sharepoint.tenant-id": "Tenant ID",
+  "admin.config.sharepoint.tenant-id.description":
+    "Azure AD (Entra ID) Tenant ID for authentication.",
+  "admin.config.sharepoint.client-id": "Client ID",
+  "admin.config.sharepoint.client-id.description":
+    "Azure AD App Registration Client ID.",
+  "admin.config.sharepoint.client-secret": "Client Secret",
+  "admin.config.sharepoint.client-secret.description":
+    "Azure AD App Registration Client Secret.",
+  "admin.config.sharepoint.site-id": "Site ID",
+  "admin.config.sharepoint.site-id.description":
+    "SharePoint Site ID. Find this via Graph Explorer: GET /sites/{hostname}:/{site-path}",
+  "admin.config.sharepoint.drive-id": "Drive ID",
+  "admin.config.sharepoint.drive-id.description":
+    "SharePoint Drive ID. Leave blank to use the default document library of the site.",
+  "admin.config.sharepoint.folder-path": "Folder Path",
+  "admin.config.sharepoint.folder-path.description":
+    "Folder path inside the document library where files will be stored.",
   "admin.config.category.legal": "Legal",
   "admin.config.legal.enabled": "Enable legal notices",
   "admin.config.legal.enabled.description":

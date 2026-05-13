@@ -1,6 +1,6 @@
-# <div align="center"><img src="https://github.com/user-attachments/assets/b5bc0c1e-5641-4106-b322-a1b0f5448b0f" width="60"/> </br>Pingvin Share X</div>
+# Vikele FileShare
 
-Pingvin Share X is a fork of [Pingvin Share](https://github.com/stonith404/pingvin-share), a self-hosted file sharing platform and an alternative for WeTransfer.
+Vikele FileShare is a self-hosted file sharing platform, built and maintained by **Vikele Solutions**. Based on the open-source Pingvin Share project (BSD-2-Clause).
 
 ## Features
 
@@ -12,67 +12,35 @@ Pingvin Share X is a fork of [Pingvin Share](https://github.com/stonith404/pingv
 - Reverse shares
 - OIDC and LDAP authentication
 - Integration with ClamAV for security scans
-- Different file providers: local storage and S3
+- Multiple storage providers: **Local storage**, **S3**, and **SharePoint**
 
 ## Setup
 
 ### Installation with Docker (recommended)
 
-1. Download the `docker-compose.yml` file
-2. Run `docker compose up -d`
+1. Clone this repository
+2. Run `docker compose -f docker-compose.production.yml up -d --build`
 
 The website is now listening on `http://localhost:3000`.
 
-> [!TIP]
-> Checkout [stonith404/Pocket ID](https://github.com/stonith404/pocket-id), a user-friendly OIDC provider that lets you easily log in to services like Pingvin Share X using Passkeys. Made by the original creator of Pingvin Share.
+### SharePoint Storage
+
+Vikele FileShare supports storing uploaded files directly in a SharePoint document library. To configure:
+
+1. Register an Azure AD (Entra ID) app with `Sites.ReadWrite.All` application permission
+2. Navigate to **Admin → SharePoint** in the web UI
+3. Enter your Tenant ID, Client ID, Client Secret, Site ID, and Drive ID
+4. Enable the SharePoint provider
+
+See the [SharePoint Setup Guide](docs/docs/setup/sharepoint.md) for detailed instructions.
 
 ## Documentation
 
-For more installation options and advanced configurations, please refer to the [documentation](https://smp46.github.io/pingvin-share-x/).
+For more installation options and advanced configurations, please refer to the documentation.
 
-## Contributing
+## Setup project (development)
 
-All contributions are welcome, including issues, feature suggestions, pull requests and *translations*.
-
-### Translations
-
-This project supports 28 languages so far (to varying degrees), you can help complete
-those translations or add more at [CrowdIn](https://crowdin.com/project/pingvin-share-x).
-
-### AI Usage Policy
-
-Anyone submitting code to this repo needs to read and comply with the project's [AI Usage Policy](https://github.com/smp46/pingvin-share-x/blob/main/AI_USAGE_POLICY.md). Submissions that do not comply with be closed.
-
-### Getting started
-
-If you have found a bug, have suggestion or something else, please create an issue.
-
-### Submit a Pull Request
-
-Before you submit the pull request for review please ensure that
-
-- The pull request naming follows the [Conventional Commits specification](https://www.conventionalcommits.org):
-
-  `<type>[optional scope]: <description>`
-
-  example:
-
-  ```
-  feat(share): add password protection
-  ```
-
-  When `TYPE` can be:
-  - **feat** - is a new feature
-  - **doc** - documentation only changes
-  - **fix** - a bug fix
-  - **refactor** - code change that neither fixes a bug nor adds a feature
-
-- Your pull request has a detailed description
-- You run `npm run format` to format the code
-
-### Setup project
-
-#### Backend
+### Backend
 
 1. Open the `backend` folder
 2. Install the dependencies with `npm install`
@@ -80,15 +48,13 @@ Before you submit the pull request for review please ensure that
 4. Seed the database with `npx prisma db seed`
 5. Start the backend with `npm run dev`
 
-#### Frontend
+### Frontend
 
 1. Start the backend first
 2. Open the `frontend` folder
 3. Install the dependencies with `npm install`
 4. Start the frontend with `npm run dev`
 
-You're all set!
+---
 
-#### Testing
-
-At the moment we only have system tests for the backend. To run these tests, run `npm run test:system` in the backend folder.
+© Vikele Solutions — [vikele.co.za](https://vikele.co.za)

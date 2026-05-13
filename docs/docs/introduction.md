@@ -4,7 +4,7 @@ id: introduction
 
 # Introduction
 
-Pingvin Share X is a self-hosted file sharing platform and an alternative for WeTransfer.
+Vikele FileShare is a self-hosted file sharing platform and an alternative for WeTransfer.
 
 ## Features
 

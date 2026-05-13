@@ -1,7 +1,7 @@
 services:
-  pingvin-share-x:
-    container_name: pingvin-share-x
-    image: smp46/pingvin-share-x # or ghcr.io/smp46/pingvin-share-x
+  vikele-fileshare-x:
+    container_name: vikele-fileshare-x
+    image: smp46/vikele-fileshare-x # or ghcr.io/smp46/vikele-fileshare-x
     restart: unless-stopped
     ports:
       - 3000:3000
@@ -10,7 +10,7 @@ services:
     volumes:
       - "./data:/opt/app/backend/data:rw,z"
       - "./data/images:/opt/app/frontend/public/img:rw,z"
-  #      - "./config.yaml:/opt/app/config.yaml" # Add this line, if you want to configure pingvin-share via config file and not via UI
+  #      - "./config.yaml:/opt/app/config.yaml" # Add this line, if you want to configure vikele-fileshare via config file and not via UI
 
   # To add ClamAV, to scan your shares for malicious files,
-  # see https://stonith404.github.io/pingvin-share/setup/integrations/#clamav-docker-only
+  # see https://stonith404.github.io/vikele-fileshare/setup/integrations/#clamav-docker-only

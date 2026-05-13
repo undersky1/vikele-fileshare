@@ -1,5 +1,5 @@
 {
-  "name": "pingvin-share-frontend",
+  "name": "vikele-fileshare-frontend",
   "version": "1.17.0",
   "scripts": {
     "dev": "next dev",

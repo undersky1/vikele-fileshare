@@ -40,6 +40,7 @@ const categories = [
   "OAuth",
   "LDAP",
   "S3",
+  "SharePoint",
   "Legal",
   "Cache",
 ];

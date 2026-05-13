@@ -12,7 +12,7 @@ export const configVariables = {
   general: {
     appName: {
       type: "string",
-      defaultValue: "Pingvin Share X",
+      defaultValue: "Vikele FileShare",
       secret: false,
     },
     appUrl: {
@@ -150,7 +150,7 @@ export const configVariables = {
     shareRecipientsMessage: {
       type: "text",
       defaultValue:
-        "Hey!\n\n{creator} ({creatorEmail}) shared some files with you. You can view or download the files with this link: {shareUrl}\n\nThe share will expire {expires}.\n\nNote: {desc}\n\nShared securely with Pingvin Share 🐧",
+        "Hey!\n\n{creator} ({creatorEmail}) shared some files with you. You can view or download the files with this link: {shareUrl}\n\nThe share will expire {expires}.\n\nNote: {desc}\n\nShared securely with Vikele FileShare 🐧",
     },
     reverseShareSubject: {
       type: "string",
@@ -159,25 +159,25 @@ export const configVariables = {
     reverseShareMessage: {
       type: "text",
       defaultValue:
-        "Hey!\n\nA share was just created with your reverse share link: {shareUrl}\n\nShared securely with Pingvin Share 🐧",
+        "Hey!\n\nA share was just created with your reverse share link: {shareUrl}\n\nShared securely with Vikele FileShare 🐧",
     },
     resetPasswordSubject: {
       type: "string",
-      defaultValue: "Pingvin Share password reset",
+      defaultValue: "Vikele FileShare password reset",
     },
     resetPasswordMessage: {
       type: "text",
       defaultValue:
-        "Hey!\n\nYou requested a password reset. Click this link to reset your password: {url}\nThe link expires in an hour.\n\nPingvin Share 🐧",
+        "Hey!\n\nYou requested a password reset. Click this link to reset your password: {url}\nThe link expires in an hour.\n\nVikele FileShare 🐧",
     },
     inviteSubject: {
       type: "string",
-      defaultValue: "Pingvin Share invite",
+      defaultValue: "Vikele FileShare invite",
     },
     inviteMessage: {
       type: "text",
       defaultValue:
-        'Hey!\n\nYou were invited to Pingvin Share. Click this link to accept the invite: {url}\n\nYou can use the email "{email}" and the password "{password}" to sign in.\n\nPingvin Share 🐧',
+        'Hey!\n\nYou were invited to Vikele FileShare. Click this link to accept the invite: {url}\n\nYou can use the email "{email}" and the password "{password}" to sign in.\n\nVikele FileShare 🐧',
     },
   },
   smtp: {
@@ -413,6 +413,37 @@ export const configVariables = {
     useChecksum: {
       type: "boolean",
       defaultValue: "true",
+    },
+  },
+  sharepoint: {
+    enabled: {
+      type: "boolean",
+      defaultValue: "false",
+    },
+    tenantId: {
+      type: "string",
+      defaultValue: "",
+    },
+    clientId: {
+      type: "string",
+      defaultValue: "",
+    },
+    clientSecret: {
+      type: "string",
+      defaultValue: "",
+      obscured: true,
+    },
+    siteId: {
+      type: "string",
+      defaultValue: "",
+    },
+    driveId: {
+      type: "string",
+      defaultValue: "",
+    },
+    folderPath: {
+      type: "string",
+      defaultValue: "",
     },
   },
   legal: {

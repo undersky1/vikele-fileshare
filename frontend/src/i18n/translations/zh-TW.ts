@@ -326,7 +326,7 @@ export default {
 
   // /admin/config
   "admin.config.config-file-warning.title": "Configuration file present",
-  "admin.config.config-file-warning.description": "As you have a configured Pingvin Share with a configuration file, you can't change the configuration through the UI.",
+  "admin.config.config-file-warning.description": "As you have a configured Vikele FileShare with a configuration file, you can't change the configuration through the UI.",
   "admin.config.title": "配置管理",
   "admin.config.category.general": "通用",
   "admin.config.category.appearance": "外觀",
@@ -350,7 +350,7 @@ export default {
   "admin.config.appearance.custom-css": "自訂 CSS",
   "admin.config.appearance.custom-css.description": "套用到前端的全域 CSS。請謹慎使用，無效 CSS 可能影響介面。",
   "admin.config.general.app-url": "App 網址",
-  "admin.config.general.app-url.description": "Pingvin Share 的 URL",
+  "admin.config.general.app-url.description": "Vikele FileShare 的 URL",
   "admin.config.general.secure-cookies": "安全 cookies",
   "admin.config.general.secure-cookies.description": "是否要在cookies中設定安全標籤。若啟用，這個網站將無法透過HTTP瀏覽。",
   "admin.config.general.show-home-page": "顯示首頁",
@@ -367,7 +367,7 @@ export default {
   "admin.config.cache.max-items": "Maximum items",
   "admin.config.cache.max-items.description": "Maximum number of items inside the cache.",
   "admin.config.cache.redis-enabled": "Redis enabled",
-  "admin.config.cache.redis-enabled.description": "Normally Pingvin Share caches information in memory. If you run multiple instances of Pingvin Share, you need to enable Redis caching to share the cache between the instances.",
+  "admin.config.cache.redis-enabled.description": "Normally Vikele FileShare caches information in memory. If you run multiple instances of Vikele FileShare, you need to enable Redis caching to share the cache between the instances.",
   "admin.config.cache.redis-url": "Redis URL",
   "admin.config.cache.redis-url.description": "Url to connect to the Redis instance used for caching.",
   "admin.config.cache.button.test-redis": "Test Redis connection",

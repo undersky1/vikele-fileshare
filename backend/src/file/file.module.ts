@@ -6,11 +6,12 @@ import { FileController } from "./file.controller";
 import { FileService } from "./file.service";
 import { LocalFileService } from "./local.service";
 import { S3FileService } from "./s3.service";
+import { SharePointFileService } from "./sharepoint.service";
 
 @Module({
   imports: [JwtModule.register({}), ReverseShareModule, ShareModule],
   controllers: [FileController],
-  providers: [FileService, LocalFileService, S3FileService],
+  providers: [FileService, LocalFileService, S3FileService, SharePointFileService],
   exports: [FileService],
 })
 export class FileModule {}

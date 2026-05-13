@@ -3,9 +3,9 @@ import type { Config } from "@docusaurus/types";
 import { themes as prismThemes } from "prism-react-renderer";
 
 const config: Config = {
-  title: "Pingvin Share X",
+  title: "Vikele FileShare",
   tagline:
-    "Pingvin Share X is a self-hosted file sharing platform and an alternative for WeTransfer.",
+    "Vikele FileShare is a self-hosted file sharing platform and an alternative for WeTransfer.",
   favicon: "img/pingvinshare.svg",
 
   url: "https://smp46.github.io",
@@ -41,9 +41,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: "Pingvin Share X",
+      title: "Vikele FileShare",
       logo: {
-        alt: "Pingvin Share Logo",
+        alt: "Vikele FileShare Logo",
         src: "img/pingvinshare.svg",
       },
       items: [

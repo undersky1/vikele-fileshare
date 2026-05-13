@@ -14,7 +14,7 @@ Please note that ClamAV needs a lot of [resources](https://docs.clamav.net/manua
 
 If you are already running ClamAV elsewhere, you can specify the `CLAMAV_HOST` environment variable to point to that instance.
 
-Else you have to add the ClamAV container to the Pingvin Share X Docker Compose stack:
+Else you have to add the ClamAV container to the Vikele FileShare Docker Compose stack:
 
 1. Add the ClamAV container to the Docker Compose stack and start the container.
 
@@ -33,10 +33,10 @@ services:
 
 ```
 
-2. Docker will wait for ClamAV to start before starting Pingvin Share X. This may take a minute or two.
-3. The Pingvin Share logs should now log "ClamAV is active"
+2. Docker will wait for ClamAV to start before starting Vikele FileShare. This may take a minute or two.
+3. The Vikele FileShare logs should now log "ClamAV is active"
 
 ### Stand-Alone
 
 1. Install ClamAV
-2. Specify the `CLAMAV_HOST` environment variable for the backend and restart the Pingvin Share X backend.
+2. Specify the `CLAMAV_HOST` environment variable for the backend and restart the Vikele FileShare backend.
